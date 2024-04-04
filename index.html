@@ -162,6 +162,13 @@
         const convertToBrailleButton = document.getElementById('convertToBraille');
         const speakButton = document.getElementById('speak');
 
+         // Exibe a próxima paragem quando a página é carregada
+        window.addEventListener('DOMContentLoaded', function() {
+            const defaultStop = 'BOLHAO';
+            const nextStop = getNextStop(defaultStop);
+            nextStopDiv.textContent = `Próxima paragem: ${nextStop}`;
+        });
+
         busStopsSelect.addEventListener('change', function() {
             const selectedStop = this.value;
             const nextStop = getNextStop(selectedStop);
