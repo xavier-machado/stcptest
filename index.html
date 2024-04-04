@@ -119,6 +119,22 @@ button:hover {
     <button id="speak">Falar Paragem</button>
 
     <script>
+
+                document.addEventListener("DOMContentLoaded", function() {
+            const stops = {
+                // Seu objeto de paragens aqui
+            };
+
+            const busStopsSelect = document.getElementById('busStops');
+            const nextStopDiv = document.getElementById('nextStop');
+            const brailleTextDiv = document.getElementById('brailleText');
+            const convertToBrailleButton = document.getElementById('convertToBraille');
+            const speakButton = document.getElementById('speak');
+
+            // Seus event listeners e funções aqui
+        });
+
+        
         const stops = {
     "BOLHAO": ["MERCADO DO BOLHÃO", "PR. D. JOAO I", "PR.FILIPA DE LENCASTRE", "GUIL. G. FERNANDES", "CARMO", "HOSP. ST. ANTONIO", "PALACIO", "PR. DA GALIZA", "JUNTA MASSARELOS", "GOLGOTA", "PLANETARIO", "FACULDADE DE CIENCIAS", "JARDIM BOTANICO", "LORDELO", "PRT2"],
     "MERCADO DO BOLHAO": ["PR. D. JOAO I", "PR.FILIPA DE LENCASTRE", "GUIL. G. FERNANDES", "CARMO", "HOSP. ST. ANTONIO", "PALACIO", "PR. DA GALIZA", "JUNTA MASSARELOS", "GOLGOTA", "PLANETARIO", "FACULDADE DE CIENCIAS", "JARDIM BOTANICO", "LORDELO"],
