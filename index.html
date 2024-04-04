@@ -25,7 +25,7 @@
 
         .container {
             width: 90%;
-            max-width: 600px;
+            max-width: 800px;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
@@ -39,6 +39,8 @@
 
         h1 {
             margin-bottom: 20px;
+            font-size: 36px;
+            color: #007bff;
         }
 
         /* Estilo do seletor de paragens */
@@ -66,58 +68,57 @@
         /* Estilo dos botões */
         .buttons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         button {
-            margin: 0 10px;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 30px;
+            font-size: 18px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            background-color: #28a745;
+            background-color: #007bff;
             color: #fff;
             transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #218838;
-        }
-
-        /* Estilo do resultado */
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #dc3545;
-            width: 100%;
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>PARAGENS DE AUTOCARRO</h1>
-        <select id="busStops">
-            <option value="BOLHAO">BOLHÃO</option>
-            <option value="MERCADO DO BOLHAO">MERCADO DO BOLHÃO</option>
-            <option value="PR. D. JOAO I">PR. D. JOÃO I</option>
-            <option value="PR.FILIPA DE LENCASTRE">PR.FILIPA DE LENCASTRE</option>
-            <option value="GUIL. G. FERNANDES">GUIL. G. FERNANDES</option>
-            <option value="CARMO">CARMO</option>
-            <option value="HOSP. ST. ANTONIO">HOSP. ST. ANTÓNIO</option>
-            <option value="PALACIO">PALÁCIO</option>
-            <option value="PR. DA GALIZA">PR. DA GALIZA</option>
-            <option value="JUNTA MASSARELOS">JUNTA MASSARELOS</option>
-            <option value="GOLGOTA">GÓLGOTA</option>
-            <option value="PLANETARIO">PLANETÁRIO</option>
-            <option value="FACULDADE DE CIENCIAS">FACULDADE DE CIÊNCIAS</option>
-            <option value="JARDIM BOTANICO">JARDIM BOTÂNICO</option>
-            <option value="LORDELO">LORDELO</option>
-        </select>
+        <div class="select-wrapper">
+            <select id="busStops">
+                <option value="BOLHAO">BOLHÃO</option>
+                <option value="MERCADO DO BOLHAO">MERCADO DO BOLHÃO</option>
+                <option value="PR. D. JOAO I">PR. D. JOÃO I</option>
+                <option value="PR.FILIPA DE LENCASTRE">PR.FILIPA DE LENCASTRE</option>
+                <option value="GUIL. G. FERNANDES">GUIL. G. FERNANDES</option>
+                <option value="CARMO">CARMO</option>
+                <option value="HOSP. ST. ANTONIO">HOSP. ST. ANTÓNIO</option>
+                <option value="PALACIO">PALÁCIO</option>
+                <option value="PR. DA GALIZA">PR. DA GALIZA</option>
+                <option value="JUNTA MASSARELOS">JUNTA MASSARELOS</option>
+                <option value="GOLGOTA">GÓLGOTA</option>
+                <option value="PLANETARIO">PLANETÁRIO</option>
+                <option value="FACULDADE DE CIENCIAS">FACULDADE DE CIÊNCIAS</option>
+                <option value="JARDIM BOTANICO">JARDIM BOTÂNICO</option>
+                <option value="LORDELO">LORDELO</option>
+            </select>
+        </div>
         <div id="nextStop"></div>
         <div id="brailleText"></div>
-        <button id="convertToBraille">Converter para Braille</button>
-        <button id="speak">Falar Paragem</button>
+        <div class="buttons">
+            <button id="convertToBraille">Converter para Braille</button>
+            <button id="speak">Falar Paragem</button>
+        </div>
     </div>
 
     <script>
