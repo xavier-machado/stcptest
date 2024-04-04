@@ -75,6 +75,10 @@
             flex-wrap: wrap;
         }
 
+        .button-wrapper {
+            margin-bottom: 10px;
+        }
+
         button {
             padding: 12px 30px;
             font-size: 18px;
@@ -116,8 +120,12 @@
         <div id="nextStop"></div>
         <div id="brailleText"></div>
         <div class="buttons">
-            <button id="convertToBraille">Converter para Braille</button>
-            <button id="speak">Falar Paragem</button>
+            <div class="button-wrapper">
+                <button id="convertToBraille">Converter para Braille</button>
+            </div>
+            <div class="button-wrapper">
+                <button id="speak">Falar Paragem</button>
+            </div>
         </div>
     </div>
 
