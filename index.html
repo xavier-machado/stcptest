@@ -171,7 +171,7 @@
         convertToBrailleButton.addEventListener('click', function() {
             const selectedStop = busStopsSelect.value;
             const brailleText = convertToBraille(selectedStop);
-            brailleTextDiv.textContent = `Texto em Braille: ${brailleText}`;
+            brailleTextDiv.textContent = `Braille: ${brailleText}`;
         });
 
         speakButton.addEventListener('click', function() {
